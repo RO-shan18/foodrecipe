@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: #dde7d5c7;
+}
+
+.navbar{
+    background-color: blueviolet;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contain{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar img{
+    position:relative;
+    right:30px;
+}
+
+.navbar input{
+    padding:10px;
+    padding-right:70px;
+    border-radius: 9px;
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN,
+    Meiryo, MS Gothic;
+}
+
+h2{ 
+    font-family:Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN,
+    Meiryo, MS Gothic;
+    color:white;
+    text-align: center;
+    padding:15px;
+    animation:title 2s infinite;
+}
+
+.heading{
+    color:rgb(160, 154, 154);
+    font-family:Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN,
+    Meiryo, MS Gothic;
+    text-align:center;
+}
+
+@keyframes title{
+    0%{
+        color: red;
+    }
+
+    25%{
+        color:rgb(12, 220, 189);
+    }
+
+    50%{
+        color:yellow;
+    }
+    
+    75%{
+        color:rgb(103, 164, 11);
+    }
+
+    100%{
+        color:white;
+    }
+}
+
+.foodrecipe{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    gap: 50px;
+}
+
+.foodinfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #d1d1d1;
+    border-radius: 12px;
+    max-width:400px;
+    overflow:hidden;
+    box-shadow: 8px 8px 9px #605a5a;
+    cursor:pointer;
+}
+
+.foodinfo img{
+  max-width:400px;
+}
+
+.foodinfo h3{
+    text-align:center;
+    font-family:Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN,
+    Meiryo, MS Gothic;
+    color: #8e7e9d;
+}
+
+.foodinfo p{
+    font-family:Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN,
+    Meiryo, MS Gothic;
+    color: #8e7e9d;
+    font-weight:500;
+}
+
+
+#ingredients {
+    background-color: #ffffffc7;
+    width: 23%;
+    border-radius: 7px;
+    color: black;
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN;
+    padding: 21px 0px 26px 51px;
+    display:none;
+    position: fixed;
+    left: 37%;
+    top: 15%;
+}
+
+#ingredients ul{
+    list-style:decimal;
+    font-family: Helvetica Neue, helvetica, arial, Hiragino Kak Gothic ProN;
+    padding-top: 12px;
+}
+
+#ingredients ul li{
+    padding-top: 6px;
+}
+
+#ingredients div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel{
+    margin-right: 18px;
+    background-color: aqua;
+    padding: 3px;
+    border-radius: 3px;
+    filter: invert(1);
+    cursor:pointer;
+}
+
+/* .hover-effect{
+    transform: scale(1.05);
+} */
+
+@media (max-width:800px){
+    #ingredients{
+        width:50%;
+        left:22%;
+        top:20%;
+    }
+}
+
+@media (max-width:500px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    h2{
+        padding-bottom: 10px;
+    }
+
+    .navbar input{
+        margin: 0px 0px 12px 30px;
+    }
+
+    .navbar img{
+        padding-bottom: 10px;
+    }
+
+    .foodinfo{
+        max-width: 275px;
+    }
+    
+}
